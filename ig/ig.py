@@ -17,8 +17,9 @@ from igMetadaCollector import getMetaData
 ########################################
 
 user = '' # set user for your own computer
-lengthOfScroll = 1
-searchTerm = ['unschooling', 'how to unschool your child', 'tradwives']
+login = False
+lengthOfScroll = 2
+searchTerm = ['unschooling']
 
 def startBrowser():
     options = webdriver.ChromeOptions()
@@ -28,7 +29,11 @@ def startBrowser():
     options.add_argument(f"--profile-directory={profile}")
     browser = webdriver.Chrome(options=options)
     logging.info("Opening browser!")
-    time.sleep(1)
+    browser.get("https://www.instagram.com")
+    if (login):
+        time.sleep(100)
+    else:
+        time.sleep(1)
     return browser
 
 
@@ -47,7 +52,8 @@ def readInstagram(intermediateFilePath, finalFilePath):
         links = []
         for el in elements:
             l = el['href']
-            final_l = l.replace('/', '')
+            final_l = l.replace('p/', '')
+            final_l = final_l.replace('/', '')
             links.append(final_l)
 
         fileExists = os.path.isfile(finalFilePath)
@@ -61,24 +67,28 @@ def readInstagram(intermediateFilePath, finalFilePath):
                     writer.writerow([item])
 
 
-def getInstagram(term):
+def getInstagram(term, browser):
     if not os.path.isdir('./intermediate'):
         os.mkdir('./intermediate')
 
     if not os.path.isdir('./data'):
         os.mkdir('./data')
 
+    if not os.path.isdir('./screenshots'):
+        os.mkdir('./screenshots')
+
     intermediateFilePath = f'./intermediate/{term}_{datetime.datetime.now().strftime("%m-%d-%y %H:%M:%S")}.html'
     finalFilePath = f'./intermediate/{term}_{datetime.datetime.now().strftime("%m-%d-%y %H:%M:%S")}.csv'
 
-    browser = startBrowser()
     browser.get(f'https://www.instagram.com/explore/search/keyword/?q={term}')
     time.sleep(10)
     for i in range(0, lengthOfScroll):
-        ActionChains(browser)\
-            .scroll_by_amount(0, 900)\
-            .perform()
+        if (i != 0):
+            ActionChains(browser)\
+                .scroll_by_amount(0, 900)\
+                .perform()
         time.sleep(5)
+        browser.save_screenshot(f'./screenshots/{term}_{datetime.datetime.now().strftime("%m-%d-%y %H:%M:%S")}.png')
         downloadPage(browser, intermediateFilePath)
         readInstagram(intermediateFilePath, finalFilePath)
     
@@ -98,8 +108,13 @@ def getUniquePosts(filePath):
 # Run unschooling queries
 ########################################
 
-for search in searchTerm:
-    filePath = getInstagram(search)
-    getUniquePosts(filePath)
-    outFilePath = f'./data/{search}_{datetime.datetime.now().strftime("%m-%d-%y %H:%M:%S")}.csv'
-    getMetaData(filePath, outFilePath)
+browser = startBrowser()
+
+if login == False:
+    for search in searchTerm:
+        filePath = getInstagram(search, browser)
+        getUniquePosts(filePath)
+        outFilePath = f'./data/{search}_{datetime.datetime.now().strftime("%m-%d-%y %H:%M:%S")}.csv'
+        getMetaData(filePath, outFilePath)
+
+browser.quit()
