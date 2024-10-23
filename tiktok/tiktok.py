@@ -14,7 +14,7 @@ import os
 # Helper methods
 ########################################
 
-user = 'belle' # set user for your own computer
+user = '' # set user for your own computer
 login = False
 searchTerm = ['unschooling']
 lengthOfScroll = 1
@@ -61,14 +61,11 @@ def readTikTok(intermediateFilePath, finalFilePath):
                 e.append(alt_text)
 
             if index < len(viewCount):
-                e.append(viewCount[index].contents)
+                e.append(viewCount[index].contents[0])
 
             links.append(e)
 
         
-
-            
-
         fileExists = os.path.isfile(finalFilePath)
         isEmpty = os.stat(finalFilePath).st_size == 0 if fileExists else True
         header = ['link', 'text', 'views']
@@ -87,16 +84,20 @@ def getTikTok(term, browser):
     if not os.path.isdir('./data'):
         os.mkdir('./data')
 
+    if not os.path.isdir('./screenshots'):
+        os.mkdir('./screenshots')
     intermediateFilePath = f'./intermediate/{term}_{datetime.datetime.now().strftime("%m-%d-%y %H:%M:%S")}.html'
-    finalFilePath = f'./intermediate/{term}_{datetime.datetime.now().strftime("%m-%d-%y %H:%M:%S")}.csv'
+    finalFilePath = f'./data/{term}_{datetime.datetime.now().strftime("%m-%d-%y %H:%M:%S")}.csv'
 
     browser.get(f'https://www.tiktok.com/search?q={term}')
     time.sleep(10)
     for i in range(0, lengthOfScroll):
-        ActionChains(browser)\
-            .scroll_by_amount(0, 900)\
-            .perform()
+        if i != 0:
+            ActionChains(browser)\
+                .scroll_by_amount(0, 900)\
+                .perform()
         time.sleep(5)
+        browser.save_screenshot(f'./screenshots/{term}_{datetime.datetime.now().strftime("%m-%d-%y %H:%M:%S")}.png')
         downloadPage(browser, intermediateFilePath)
         readTikTok(intermediateFilePath, finalFilePath)
     
@@ -110,3 +111,5 @@ browser = startBrowser()
 if login == False:
     for search in searchTerm:
         filePath = getTikTok(search, browser)
+
+browser.quit()
