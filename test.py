@@ -1,0 +1,39 @@
+import googleapiclient.discovery
+import os
+from dotenv import load_dotenv
+
+# Load .env file
+load_dotenv()
+
+# Access environment variables
+YT_API = os.getenv('YT_API')
+OAUTH_SECRET = os.getenv('OAUTH_SECRET')
+
+# API information
+api_service_name = "youtube"
+api_version = "v3"
+
+# API client
+youtube = googleapiclient.discovery.build(
+    api_service_name, api_version, developerKey = YT_API)
+
+request = youtube.search().list(
+    part="id,snippet",
+    # publishedAt ="",
+    type="video",
+    q="call of duty", #query or search term goes here
+    videoDuration="short",
+    # videoDefinition="",
+    maxResults=1000,
+)
+"""
+# to request id and snippet parts properties
+request = youtube.channels().list(
+    part="id,snippet"
+)
+"""
+
+# Query execution
+response = request.execute()
+# Print the results
+print(response)
