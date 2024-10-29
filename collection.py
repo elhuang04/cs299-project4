@@ -1,3 +1,10 @@
+"""
+CS299 Project 4
+Data collection using YouTube API to automate search queries.
+Authors: Elizabeth Huang
+Last Modified: 10/25
+"""
+
 import googleapiclient.discovery
 import os
 from dotenv import load_dotenv
@@ -37,3 +44,6 @@ request = youtube.channels().list(
 response = request.execute()
 # Print the results
 print(response)
+
+#TODO: store data into json or csv files
+#TODO: get recommendations and use BFS to crawl more videos

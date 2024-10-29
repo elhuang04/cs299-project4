@@ -1,0 +1,486 @@
+Markiplier
+LazarBeam
+Jacksepticeye
+PewDiePie
+CoryxKenshin
+Dan TDM
+VanossGaming
+MrBeast
+The Game Theorists
+PopularMMOs
+H2ODelirious
+Ssundee
+CaptainSparklez
+TBNRfrags
+8-BitRyan
+Vikkstar123
+Lachlan
+LDShadowLady
+ItsFunneh
+theRadBrad
+CallmeKevin
+I AM WILDCAT
+Daithi De Nogla
+grian
+Mr.Crainer
+Sidemen
+GamingWithJen
+Videogamedunkey
+GameGrumps
+Kreek Craft
+kubz scouts
+SSSniperWolf
+Neebs Gaming
+CallMeCarson
+Angry Video Game Nerd (James Rolfe)
+CinnamonToastKen
+Dashiegames
+iHasCupquake
+Smosh Games
+Mully
+PeanutButterGamer
+Zackscottgames
+Leah Ashe
+JonTronShow
+IamSanna
+mcyum
+InquisitorMaster
+sunny unicorn twin
+KSI
+Old Nerd Playing Old PC Games
+Call of Duty 
+Valorent 
+CSgo 
+Assassin's Creed 
+Call of duty Warcraft 
+World of warcraft 
+Roblox 
+Cinemassacre
+Silly on Roblox
+moody unicorn twin
+Cryaotic
+Danandphilgames
+SeaNanners Gaming Channel
+GassyMexican
+LetsPlay
+UberHaxorNova
+Chris Smoove
+DidYouKnowGaming?
+YOGSCAST Sjin
+TotalBiscuit, The Cynical Brit
+Joey Graceffa
+AngryJoeShow
+BlueXephos
+OfficialNerdCubed
+Sips
+The Owen
+YOGSCAST Duncan
+Blastphamoushd Gaming
+LORE
+PointlessBlogGames
+Fine Brothers
+8, 16, 32, 64-bit
+2D
+3D
+4K and 8K resolution
+AA / Auto-attack
+AAA
+Achievements
+Adventure game
+AFK
+Aggro
+AI
+Aimbot
+Alpha
+Animation cancelling
+AOE
+Assist
+Avatar
+Ban
+Battle Royale
+Beat ’em up
+Beta
+Biome
+BM
+Boosting
+Boss
+Bots
+BRB
+Buff
+Bullet sponge
+Campaign
+Camping
+Casual
+CC
+Cheat
+Checkpoint
+Cheese/cheesing
+Clan
+Class
+Closed beta
+Co-op
+COD
+Combo
+Complete/clock/beat
+Console
+Cooldown
+CPU
+Crafting
+Critical hit
+Cross-platform
+CTF
+Cutscene
+D-pad
+Deathmatch
+Debuff
+Demo
+Developer
+DLC
+DPS
+Draw distance
+Driving simulator
+DRM
+Dual wield
+Easter egg
+Emulator
+Esports
+Expansion pack
+F2P
+Faceroll character
+Farming
+Feeding
+Fighting game
+Flying simulator
+Fog of war
+FOV
+FPS (Frames per second)
+FPS (First-person shooter)
+Frag
+G2G
+Game over
+Gank
+GG
+GG EZ
+GG no re
+Glitch
+GLHF
+GPU
+GOAT
+Griefing
+Grinding
+Guild
+Hacker
+Headshot
+Healer
+Hitscan
+HP
+HUD
+Indie
+JRPG
+K/D
+Kick
+KO
+KS
+Ladder / ranked mode
+Lag
+Level
+Loot
+MP
+Mana
+Map
+Matchmaking
+Mechanics
+Meta
+MMORPG
+Mob
+MOBA
+Mod
+Mute
+noob
+Nerf
+NPC
+OP
+Open Beta
+Open world
+Party game
+Patch
+Peel
+Permadeath
+Ping
+Platformer
+Point-and-click
+PVE
+PVP
+Pwn
+QQ
+QTE
+Ragequit, rq
+Rekt
+Respawn
+RNG
+RPG
+RTS
+Rush
+Sandbox
+Scrub
+Sidequest
+Skin
+Smurf
+Speedrun
+Spells, skills
+Strafing
+Tank
+Troll
+Tryhard
+Unit
+Vanilla
+Wombo combo
+WOW
+XP
+Kiting
+Kicking
+Min-maxing
+K/D ratio
+OHK
+Out-of-bounds
+Speed-run
+Spamming
+Stun-lock
+Tanking
+Turn-based
+Telegraph
+Time-attack
+T-pose
+Under-levelled
+Zoning
+Lobby
+Loadout
+Matchmaking
+Party
+PVP/PVE
+Raid
+Loot
+Nades
+Skins
+Unlocks
+Drops
+Status effects
+Noob
+Noob-tube
+Ragequit
+Wrecked/Rekt
+Whiff
+NG+ / New Game +
+RPG
+Procedural generation
+Permadeath
+Visual novel
+Walking sim
+Ray-tracing
+Resolution
+RAM
+SSD
+VRR
+VR
+Quest-giver
+Quick-time event (QTE)
+XP
+Aggro
+ARPG
+ADS
+AoE
+Bots
+Backwards compatibility
+Bug
+Balancing
+Bullet sponge
+Buff
+Boss-rush
+Cheesing
+CPU
+CRPG
+Camping
+Crafting
+Combo
+DPS
+Dungeon
+Dialogue tree
+De-buff
+De-aggro
+Easter egg
+Exploit
+Escort mission
+End-game
+Finisher
+Fetch-quest
+Friendly fire
+FF
+Frame-rate
+Fast travel
+Frame-buffer
+FPS
+Farming
+F2P
+Ganking
+GPU
+GDDR
+Grinding
+Git gud
+GG
+Griefing
+HP
+Haptic feedback
+HUD
+HDR
+Hit box
+I-frames
+Integrated I/O
+Invasion
+Invisible walls
+JRPG
+Juggling
+Judder
+Nintendo
+Ubisoft
+Electronic Arts
+2K
+Microsoft
+Sony Interactive Entertainment
+PlayStation 5
+Xbox Series X
+Xbox Series S
+Nintendo Switch
+Playstation 5 Slim
+Sony Playstation 5 Slim
+Switch
+Series X
+Series S
+Sony PlayStation 5 Slim Digital Edition
+PlayStation 4
+Activision-Blizzard
+PlayStation Plus
+Xbox Game Pass Core
+Meta Quest 2
+PlayStation VR
+PS5
+PS4
+Xbox
+DTS:X
+Microsoft Xbox Series X
+Microsoft Xbox Series S
+Xbox One
+OLED
+Switch Lite
+Samsung Pro Plus microSD Card
+Asus
+ROG Ally X
+Steam Deck
+Legion Go
+Helldivers II
+Modern Warfare III
+Dragon's Dogma 2
+Final Fantasy VII Rebirth
+MLB The Show 24
+PUBG
+Fortnite
+Roblox
+Minecraft
+Roblox
+Garena Free Fire
+Grand Theft Auto V
+Fortnite
+League of Legends
+Mobile Legends: Bang Bang
+Among Us
+PLAYERUNKNOWN'S Battlegrounds Mobile
+BeamNG.drive
+Counter-Strike 2
+Brawl Stars
+Garry's Mod
+Poppy Playtime
+Friday Night Funkin'
+Genshin Impact
+Valorant
+PLAYERUNKNOWN'S Battlegrounds
+Clash Royale
+Five Nights at Freddy's
+Five Nights at Freddy's: Security Breach
+Apex Legends
+Dota 2
+Battlegrounds Mobile India
+Overwatch 2
+Hello Neighbor
+Ark: Survival Evolved
+Grand Theft Auto: San Andreas
+Arena of Valor
+The Sims 4
+Call of Duty: Warzone
+Clash of Clans
+Rainbow Six Siege
+Super Smash Bros. Ultimate
+Undertale
+World of Tanks
+Rocket League
+World of WarCraft
+Red Dead Redemption 2
+Happy Wheels
+Stumble Guys
+Call of Duty: Black Ops III
+Geometry Dash
+Super Mario Odyssey
+Dead by Daylight
+Team Fortress 2
+Pokémon Go
+The Elder Scrolls V: Skyrim
+Call of Duty: Black Ops II
+Rust
+SAKURA School Simulator
+Plants vs. Zombies 2: It's About Time
+Call of Duty: Mobile
+FIFA 22
+The Legend of Zelda: Breath of the Wild
+Hearthstone
+Super Mario Maker 2
+Elden Ring
+Plants vs. Zombies
+FIFA 20
+Super Mario Bros.
+Destiny 2
+FIFA 23
+Pokémon Sword and Shield
+Animal Crossing: New Horizons
+Call of Duty: Black Ops
+Baldi's Basics in Education and Learning
+Terraria
+Euro Truck Simulator 2
+Subway Surfers
+FIFA 17
+FIFA 16
+Yandere Simulator
+Himawari
+Garten of Banban
+FIFA 21
+FIFA 19
+Five Nights at Freddy's: Sister Location
+Ice Scream
+Fallout 4
+Slither.io
+Gumball
+Fall Guys
+FIFA Mobile
+FIFA 18
+Cuphead
+Super Mario Maker
+Totally Accurate Battle Simulator
+VRChat
+Human: Fall Flat
+Cyberpunk 2077
+The Walking Dead
+Forza Horizon 5
+War Thunder
+Grand Theft Auto IV
+Amanda the Adventurer
+Angry Birds
+Mini World
+Mortal Kombat 11
+God of War
