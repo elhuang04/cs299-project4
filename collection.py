@@ -13,8 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Access environment variables
-# YT_API = os.getenv('YT_API')
-YT_API = os.getenv('YT_API2')
+YT_API = os.getenv('YT_API')
 OAUTH_SECRET = os.getenv('OAUTH_SECRET')
 
 # API information
@@ -32,7 +31,7 @@ request = youtube.search().list(
     q="call of duty", #query or search term goes here
     videoDuration="short",
     # videoDefinition="",
-    maxResults=1000,
+    maxResults=5,
 )
 """
 # to request id and snippet parts properties

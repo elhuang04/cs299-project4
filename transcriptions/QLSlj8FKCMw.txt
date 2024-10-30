@@ -1,0 +1,1 @@
+[{'text': 'wait a minute it how 10 to in when we', 'start': 3.48, 'duration': 5.9}, {'text': 'standing on', 'start': 7.12, 'duration': 14.429}, {'text': '[Music]', 'start': 9.38, 'duration': 12.169}]

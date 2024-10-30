@@ -13,7 +13,6 @@ load_dotenv()
 
 # Access environment variables
 YT_API = os.getenv('YT_API')
-OAUTH_SECRET = os.getenv('OAUTH_SECRET')
 
 # API information
 api_service_name = "youtube"
@@ -24,7 +23,6 @@ youtube = googleapiclient.discovery.build(api_service_name, api_version, develop
 
 # Function to get video transcriptions (placeholder function)
 def get_transcription(video_id):
-    # Use YouTube API to get captions/transcriptions (update with correct method)
     response = requests.get(f"https://www.youtube.com/api/timedtext?v={video_id}&lang=en")
     if response.status_code == 200:
         return response.text
@@ -54,24 +52,19 @@ def get_related_videos(video_id, n=5):
 def bfs_for_alt_right_keywords(start_video_id, alt_right_keywords, skip_words):
     queue = [(start_video_id, 0)]
     visited = set()
-
     while queue:
         current_video_id, path_length = queue.pop(0)
         if current_video_id in visited:
             continue
         visited.add(current_video_id)
-
         transcription = get_transcription(current_video_id)
         word_freq = count_word_frequencies([transcription], skip_words)
-
         if any(word in word_freq for word in alt_right_keywords):
             return current_video_id, path_length
-
+        
         related_videos = get_related_videos(current_video_id)
         queue.extend([(video_id, path_length + 1) for video_id in related_videos])
-
         time.sleep(1)  # Avoid hitting rate limits
-
     return None, -1
 
 # Main function to perform the analysis
@@ -98,22 +91,24 @@ def analyze_videos(query, alt_right_keywords, skip_words):
 
 # Function to process queries in parallel and save results to JSON file
 def process_queries_in_parallel(queries, alt_right_keywords, skip_words, output_file):
-    results = []
+    all_results = []
     with concurrent.futures.ThreadPoolExecutor() as executor:
         future_to_query = {executor.submit(analyze_videos, query, alt_right_keywords, skip_words): query for query in queries}
         for future in concurrent.futures.as_completed(future_to_query):
             query = future_to_query[future]
             try:
                 result = future.result()
-                results.extend(result)
+                all_results.extend(result)
             except Exception as exc:
                 print(f"{query} generated an exception: {exc}")
 
-    # Save results to JSON file
+    # Convert results to DataFrame
+    df = pd.DataFrame(all_results)
+
+    # Save DataFrame to JSON file
     if not os.path.exists('collected_data'):
         os.makedirs('collected_data')
-    with open(os.path.join('collected_data', output_file), 'w') as outfile:
-        json.dump(results, outfile, indent=4)
+    df.to_json(os.path.join('collected_data', output_file), orient='records', lines=True, indent=4)
 
 # Example usage
 with open("keywords/alt-right.txt", "r") as file:
