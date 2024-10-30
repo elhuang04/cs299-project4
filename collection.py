@@ -13,7 +13,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Access environment variables
-YT_API = os.getenv('YT_API')
+# YT_API = os.getenv('YT_API')
+YT_API = os.getenv('YT_API2')
 OAUTH_SECRET = os.getenv('OAUTH_SECRET')
 
 # API information
