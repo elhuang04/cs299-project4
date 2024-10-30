@@ -1,0 +1,47 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "RIswfCTeOLPld6pCsIPO6ceZi0A",
+  "nextPageToken": "CAEQAA",
+  "regionCode": "US",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 1
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Aux5maS6B8ZeFO1wo3SzHZzXsIg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fB8TyLTD7EE"
+      },
+      "snippet": {
+        "publishedAt": "2018-09-26T13:00:06Z",
+        "channelId": "UC2t5bjwHdUX4vM2g8TRDq5g",
+        "title": "RISE (ft. The Glitch Mob, Mako, and The Word Alive) | Worlds 2018 - League of Legends",
+        "description": "Reaching the peak takes more than skill. Only those with the ambition to RISE above all others will know its height. For more ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fB8TyLTD7EE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fB8TyLTD7EE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fB8TyLTD7EE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "League of Legends",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-09-26T13:00:06Z"
+      }
+    }
+  ]
+}
+
