@@ -8,8 +8,8 @@ Steps:
     3. Uses NLP library to only extract key entities (nouns, verbs) and check that none of these extracted words are listed in 'skip_words.txt'.
     4. Gets all keywords already in "keywords/alt-right.txt" and concatenates those keywords with the extracted ones above.
     5. Count the number of alt-right keywords in each video's transcript
-    6. Parallel processing to count keywords in each video and update the DataFrame
-    7. Update combined_df with keyword counts
+    6. Parallel processing to compare similiarty in each video to alt-right content and update the DataFrame
+    7. Update combined_df with similarity scoring
 Authors: Elizabeth Huang
 Last Modified: 11/06/2024
 """
