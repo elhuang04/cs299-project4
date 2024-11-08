@@ -4,143 +4,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOREM IPSUM</title>
+    <title>Card Widget</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-size: 80%;
+            font-family: 'Open Sans', sans-serif;
         }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
-        }
-
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        header li {
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-
-        .main-content {
-            background: #fff;
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
             padding: 20px;
-            margin-top: 20px;
+            font-family: 'Open Sans', sans-serif;
+            height: 30vh;
+            overflow: hidden;
+            position: relative;
         }
 
-        .item {
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
+        .card.expanded {
+            height: auto;
+            overflow: visible;
         }
 
-        .item h3 {
-            margin: 0;
-            padding: 0;
+        .card h1,
+        .card h2,
+        .card h3 {
+            color: #333;
         }
 
-        .item p {
-            margin: 5px 0;
+        .card p {
+            color: #555;
         }
 
-        .item .category {
-            color: #777;
+        .card pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
         }
 
-        .item .tags {
-            color: #aaa;
+        .fade-out {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.6));
+            display: none;
         }
 
-        .item .images {
-            display: flex;
-            gap: 10px;
+        .card:not(.expanded) .fade-out {
+            display: block;
         }
 
-        .item .images div {
-            width: 50px;
-            height: 50px;
-            background: #ddd;
+        .expand-link,
+        .minimize-link,
+        .github-repo {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            color: #007BFF;
+        }
+
+        .github-repo button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .github-repo button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <h1>LOREM IPSUM</h1>
-            <ul>
-                <li><a href="#">Information</a></li>
-                <li><a href="#">Email</a></li>
-                <li><a href="#">Instagram</a></li>
-            </ul>
+    <div class="card" id="markdown-content">
+        <!-- GitHub repo widgets and links at the top -->
+        <div class="github-repo">
+            <iframe src="https://ghbtns.com/github-btn.html?user=elhuang04&repo=cs299-project4&type=star&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=elhuang04&repo=cs299-project4&type=fork&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>
+            <button onclick="window.open('https://github.com/elhuang04/cs299-project4', '_blank')">Visit the Repository</button>
         </div>
-    </header>
-    <div class="container main-content">
-        <div class="item">
-            <h3>Fusce Magna Erat</h3>
-            <p>07-15-24</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu felis euismod mauris tempor finibus sed
-                vitae urna. Pellentesque accumsan dolor vel nisi aliquam.</p>
-            <p class="category">Category</p>
-            <p class="tags">Tag-1, Tag-2, Tag-3</p>
-            <div class="images">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-        <div class="item">
-            <h3>Suspendisse Feugiat Dignissim</h3>
-            <p>07-16-24</p>
-            <p>Phasellus bibendum lacus scelerisque, luctus ante non, venenatis sapien. Mauris eu efficitur lectus.
-                Nullam fermentum risus a purus ullamcorper aliquet.</p>
-            <p class="category">Category</p>
-            <p class="tags">Tag-4, Tag-5, Tag-6</p>
-            <div class="images">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-        <div class="item">
-            <h3>Vivamus EU Quam II</h3>
-            <p>07-17-24</p>
-            <p>Maecenas ante mi, lacinia eu congue a, blandit ac tellus. In gravida euismod condimentum. Vestibulum ante
-                ipsum primis in faucibus orci luctus.</p>
-            <p class="category">Category</p>
-            <p class="tags">Tag-1, Tag-3, Tag-5</p>
-            <div class="images">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
+        <!-- Content will be inserted here -->
+        <div class="fade-out"></div>
     </div>
+
+    <div class="expand-link" id="expand-link">Read More ▼</div>
+    <div class="minimize-link" id="minimize-link" style="display: none;">Read Less ▲</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('https://raw.githubusercontent.com/elhuang04/cs299-project4/main/README.md')
+                .then(response => response.text())
+                .then(markdown => {
+                    const converter = new showdown.Converter();
+                    const html = converter.makeHtml(markdown);
+                    document.getElementById('markdown-content').innerHTML += html;
+                })
+                .catch(error => console.error('Error fetching markdown:', error));
+
+            document.getElementById('expand-link').addEventListener('click', function () {
+                const card = document.getElementById('markdown-content');
+                card.classList.add('expanded');
+                document.getElementById('expand-link').style.display = 'none';
+                document.getElementById('minimize-link').style.display = 'block';
+            });
+
+            document.getElementById('minimize-link').addEventListener('click', function () {
+                const card = document.getElementById('markdown-content');
+                card.classList.remove('expanded');
+                document.getElementById('expand-link').style.display = 'block';
+                document.getElementById('minimize-link').style.display = 'none';
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
 </body>
+
 </html>
