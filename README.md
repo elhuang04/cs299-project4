@@ -1,5 +1,5 @@
 # 📝 Overview
-This project aims to analyze the presence of alt-right language in gaming-related content on YouTube, exploring potential connections in the content and recommendation patterns. The primary function of the scripts in this repository is to request a mass volume of gaming videos and compare the content of the collected video transcripts to that of political videos and keywords. The objective of this project is to observe the overlap of alt-right language usage within gaming spaces.
+This project aims to analyze the presence of alt-right language in gaming-related content on YouTube, exploring potential connections in the content and recommendation patterns. The primary function of the scripts in this repository is to request a mass volume of gaming videos and compare the content of the collected video transcripts to that of political videos and keywords. 
 
 # 🔧 Set-Up
 ## 🛠️ Environment Setup
