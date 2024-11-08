@@ -1,4 +1,5 @@
 import pandas as pd
+# from transformers import pipeline
 
 # Step 1: Load the CSV file and extract titles
 df = pd.read_csv('analysis.csv')  # Load your CSV file with video titles
@@ -9,6 +10,8 @@ titles = df['title']  # Extract the 'title' column (assuming the column is named
 #     titles = list(titles)
 #     for title in titles:
 #         f.write(str(title) + '\n')
+
+# classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
 # Step 2: Define categories and associated keywords
 category_keywords = {
@@ -88,6 +91,10 @@ def classify_title(title):
         if any(keyword in title for keyword in keywords):
             return category
     return "Other"  # If no match is found, return "Other"
+
+# def classify_title_zero_shot(title):
+#     result = classifier(title, category_keywords)
+#     return result['labels'][0]  # Return the top predicted label
 
 # Step 4: Apply classification to all titles in the dataset
 df['predicted_category'] = [classify_title(title) for title in titles]
