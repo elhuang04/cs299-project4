@@ -32,3 +32,77 @@ function togglePopup(popupId) {
         popup.style.display = popup.style.display === "none" || popup.style.display === "" ? "block" : "none";
     }
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetElement = document.querySelector(this.getAttribute('href'));
+      if (targetElement) {
+          window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth'
+          });
+      }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const smoothScroll = (targetElement, duration) => {
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      let startTime = null;
+
+      const animation = (currentTime) => {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const run = ease(timeElapsed, startPosition, distance, duration);
+          window.scrollTo(0, run);
+          if (timeElapsed < duration) requestAnimationFrame(animation);
+      };
+
+      const ease = (t, b, c, d) => {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t + b;
+          t--;
+          return -c / 2 * (t * (t - 2) - 1) + b;
+      };
+
+      requestAnimationFrame(animation);
+  };
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetElement = document.querySelector(this.getAttribute('href'));
+          if (targetElement) {
+              smoothScroll(targetElement, 1500); // Adjust the duration here
+          }
+      });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll(".panel");
+  
+  const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          const header = entry.target.querySelector("h1");
+          if (entry.isIntersecting) {
+              header.classList.add("sticky-heading");
+          } else {
+              header.classList.remove("sticky-heading");
+          }
+      });
+  }, options);
+
+  sections.forEach(section => {
+      observer.observe(section);
+  });
+});
