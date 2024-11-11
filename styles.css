@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
+html {
+  font-size:90%;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.875em; /* Decreased the font size for a smaller look */
@@ -60,8 +64,15 @@ header .group-members {
 .pfp4 .profile-icon { background-color: #66BB6A; } /* Green */
 
 a {
+  font-weight: bold; 
+  font-style: italic; 
+  color: blue; 
+  text-decoration: underline;
+}
+
+a .special {
   text-decoration: none;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.75); /* Thicker dotted underline with 75% opacity */
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.75) !important; /* Thicker dotted underline with 75% opacity */
   color: inherit;
 }
 
@@ -296,81 +307,3 @@ iframe {
     border: none; /* Removes border */
     overflow: hidden; /* Hides scrollbars */
 }
-
- body {
-            font-size: 80%;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            font-family: 'Open Sans', sans-serif;
-            height: 30vh;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .card.expanded {
-            height: auto;
-            overflow: visible;
-        }
-
-        .card h1,
-        .card h2,
-        .card h3 {
-            color: #333;
-        }
-
-        .card p {
-            color: #555;
-        }
-
-        .card pre {
-            background: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-
-        .fade-out {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.6));
-            display: none;
-        }
-
-        .card:not(.expanded) .fade-out {
-            display: block;
-        }
-
-        .expand-link,
-        .minimize-link,
-        .github-repo {
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-            cursor: pointer;
-            color: #007BFF;
-        }
-
-        .github-repo button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .github-repo button:hover {
-            background-color: #45a049;
-        }
