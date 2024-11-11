@@ -308,4 +308,169 @@ h2 {
 iframe {
     border: none; /* Removes border */
     overflow: hidden; /* Hides scrollbars */
+<<<<<<< Updated upstream
 }
+=======
+}
+
+ body {
+            font-size: 80%;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            font-family: 'Open Sans', sans-serif;
+            height: 30vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card.expanded {
+            height: auto;
+            overflow: visible;
+        }
+
+        .card h1,
+        .card h2,
+        .card h3 {
+            color: #333;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .card pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .fade-out {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.6));
+            display: none;
+        }
+
+        .card:not(.expanded) .fade-out {
+            display: block;
+        }
+
+        .expand-link,
+        .minimize-link,
+        .github-repo {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            color: #007BFF;
+        }
+
+        .github-repo button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .github-repo button:hover {
+            background-color: #45a049;
+        }
+
+
+/*table css*/
+.table-container {
+  margin-top: 20px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.data-table th, .data-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.data-table a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.data-table a:hover {
+  color: darkblue;
+}
+
+
+
+
+/* Side Panel */
+.side-panel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: width 0.3s ease;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.side-panel:hover {
+  width: 200px;
+}
+
+.menu-icon {
+  font-size: 2em;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.panel-links {
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.side-panel:hover .panel-links {
+  display: flex;
+}
+
+.panel-links a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.panel-links a:hover {
+  color: #ffcccc;
+}
+>>>>>>> Stashed changes

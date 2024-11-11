@@ -136,4 +136,23 @@ function scrollToFigureInColumn(figureId) {
                 document.getElementById('expand-link').style.display = 'block';
                 document.getElementById('minimize-link').style.display = 'none';
             });
+<<<<<<< Updated upstream
         });
+=======
+        });
+
+
+
+
+
+
+document.querySelectorAll('.panel-links a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetSection = document.querySelector(this.getAttribute('href'));
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+>>>>>>> Stashed changes
