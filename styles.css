@@ -292,11 +292,6 @@ h2 {
   font-family: 'Roboto', sans-serif;
 }
 
-
-a {
-  color: blue;
-  text-decoration: underline;
-}
 iframe {
     border: none; /* Removes border */
     overflow: hidden; /* Hides scrollbars */
