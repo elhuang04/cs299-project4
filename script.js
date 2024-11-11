@@ -137,9 +137,3 @@ function scrollToFigureInColumn(figureId) {
                 document.getElementById('minimize-link').style.display = 'none';
             });
         });
-
-
-
-
-
-
