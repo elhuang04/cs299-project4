@@ -1,5 +1,6 @@
 /* Import Open Sans from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -97,7 +98,7 @@ nav a:hover {
 
 .container {
   padding: 20px;
-  max-width: 800px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -163,3 +164,214 @@ h2 {
 .show-sidebar .sidebar {
   display: block;
 }
+
+
+/* Container for data analysis section with split columns */
+.data-analysis-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-height: 70vh; /* Set maximum height of section to 70% of viewport */
+  overflow: hidden;
+}
+
+/* Styles for left column (figures and images) */
+.images-container {
+  width: 45%;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px;
+  border-right: 1px solid #ccc;
+}
+
+/* Styles for right column (text content) */
+.text-container {
+  width: 55%;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-left: 10px;
+}
+
+/* General styling for collapsible sections */
+.collapsible-section {
+  margin-bottom: 20px;
+}
+
+/* Styling for Images in Scrollable Div */
+.figure-thumbnail {
+  width: 100%;
+  margin-bottom: 10px
+}
+
+/* Styling for Figure Container */
+.figure-container {
+  margin-bottom: 20px;
+}
+
+/* Styling for Figure Titles */
+.figure-title {
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  text-align: center;
+}
+
+/* Styling for Figure Captions */
+.figure-container figcaption {
+  margin-top: 5px;
+  font-size: 0.5em;
+  color: #555;
+  text-align: center;
+}
+/* Hover effect for figure container */
+.figure-container {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.figure-container:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to indicate interactivity */
+}
+
+/* Additional styling for image hover */
+.figure-thumbnail {
+  transition: opacity 0.2s ease;
+}
+
+.figure-container:hover .figure-thumbnail {
+  opacity: 0.9; /* Slightly dim the image on hover */
+}
+
+
+.popup {
+  display: none; /* Hide popup by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.popup-content img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  color: #333;
+  cursor: pointer;
+}
+.highlight {
+  background-color: #d3d3d3; /* Light gray */
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+iframe {
+    border: none; /* Removes border */
+    overflow: hidden; /* Hides scrollbars */
+}
+
+ body {
+            font-size: 80%;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            font-family: 'Open Sans', sans-serif;
+            height: 30vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card.expanded {
+            height: auto;
+            overflow: visible;
+        }
+
+        .card h1,
+        .card h2,
+        .card h3 {
+            color: #333;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .card pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .fade-out {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.6));
+            display: none;
+        }
+
+        .card:not(.expanded) .fade-out {
+            display: block;
+        }
+
+        .expand-link,
+        .minimize-link,
+        .github-repo {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            color: #007BFF;
+        }
+
+        .github-repo button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .github-repo button:hover {
+            background-color: #45a049;
+        }

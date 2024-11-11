@@ -6,6 +6,11 @@
   <title>Project 4: Platform Audits</title>
   
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+
 </head>
 <body>
   <header>
@@ -43,55 +48,199 @@
   <div class="container">
     <section id="introduction">
       <div class="sticky-header">
-        <h2>Introduction & Motivation</h2>
+        <h2>1 Introduction & Motivation</h2>
       </div>
-      <p>[Your introduction and motivation content here]</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; The year is 2008. The year before, the first iPhone was released making it the first time the masses could carry access to the World Wide Web in their pocket. The world is on the cusp of a great expansion of expression and community as never seen before. A thirty-year-old Richard Spencer had just dropped out of his PhD program at Duke to work for “The American Conservative” magazine—he was fired within the year for views called too extreme (ABC 13 Houston, 2017). He started “The Alternative Right” webzine in 2010. <span class="highlight">Alt-right</span>, popularized by Spencer, is a term describing the far-right, white nationalist ideology. <span class="highlight">“Alt-right pipeline”</span> is a theory describing the radicalization of individuals towards the alt-right, especially on the internet towards communities such as the one Spencer created. There have been many theories as to whether individuals in certain communities or with certain traits are more likely to participate in this pipeline, of which the online gaming community, specifically gaming content creators on YouTube, are at the forefront. It has been observed that gaming communities have developed a violent ideology associated with the American alt-right. The YouTube algorithm is often a central blame for this radicalization of young men. Specifically, misinformation seems to have a central role in how people can be sucked into the alt-right pipeline. <span class="highlight">Safiya Noble</span> suggests that a rapid shift toward commercial interests lends to deregulated media. Even more so, the internet spreads this information quickly and without many checks (Noble, 171-172). YouTube’s ad-driven revenue provides a perfect example of this vulnerability, and thus a breeding ground for alt-right content.<br></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 2014’s <span class="highlight">“Gamergate”</span> served as the start of the political split within the gaming community. The movement started as an anti-feminist heckling campaign, building off of the misogyny rampant in many gaming communities. Much of this manifests as doxxing, death threats, threats of sexual assault, and general harassment of female journalists. However, there was a much deeper and more insidious root to <span class="highlight">Gamergate</span> beyond sexism: online recruitment from neo-nazi white supremacist groups. Much of this radicalization happened on platforms like <span class="highlight">4chan</span>, <span class="highlight">8chan</span>, and <span class="highlight">Voat</span>, which were largely unregulated and fostered quite a few unethical ideologies. 4chan’s “/pol” chat board specifically appealed to many young men, <span class="highlight">Milo Yiannopoulos</span> argues, because of the shock value and comedy they find from racist trolling. The conservative radicalization, largely of young white men, has a clear follow-through in the “trolling” behavior of many Trump supporters in the 2016 election, an event marking a distinct political shift in the country (Romano). <span class="highlight">Kint Finley</span> writes that <span class="highlight">Gamergate</span> was so successful because “It tells [young white men] that they are the natural rulers of the world, but that they are simultaneously being oppressed by a secret religious order” (Matthews). The left’s push towards racial and gender equality feels like a direct attack on these young white men, making them prime victims of the alt-right movement.<br></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; We are interested in looking at how platforms like YouTube allow this kind of morally dubious content to occupy its platform in such a central space. Specifically, we are interested in seeing how gamer content contains alt-right language that leads viewers to engage with increasingly radical alt-right content. This is both an epistemic harm to the larger community, as misinformation is being spread unchecked on these platforms, and a tangible harm to marginalized communities. This project is of great importance to us because of the harm this algorithmic injustice is doing to our community, specifically in radicalizing many young men. Through the power of data analysis, we wanted to dive deep into what the YouTube algorithm is really doing, and if we can fall down the rabbit hole ourselves.<br></p>
+
     </section>
     <section id="literature">
       <div class="sticky-header">
-        <h2>Literature Review & Research Questions</h2>
+        <h2>2 Literature Review & Research Questions</h2>
       </div>
       <p>[Your literature review and research questions content here]</p>
     </section>
     <section id="data-collection">
       <div class="sticky-header">
-        <h2>Data Collection</h2>
+        <h2>3 Data Collection</h2>
       </div>
-      <h3>High-Level Idea</h3>
-      <p>[High-Level Idea content here]</p>
-      <h3>Team Repository</h3>
-      <p>[Team Repository content here]</p>
-      <h3>Raw Data Profile</h3>
-      <p>[Raw Data Profile content here]</p>
-      <h3>Methodology</h3>
-      <p>[Methodology content here]</p>
-      <h3>Implementation Details</h</p>
+      <h3>3.1 High-Level Idea</h3>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; This data collection process aims to analyze the presence of alt-right language in gaming-related content on YouTube, exploring possible connections in the content via video <strong>transcriptions</strong>. The main objective is to understand the <strong>overlap of alt-right language usage</strong> within these spaces.<br></p>
+      <h3>3.2 Team Repository</h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; This section provides an overview of our team repository, including key information and resources hosted on GitHub.</p>
+
+<!-- Card Widget for Team Repository -->
+       <div class="card" id="markdown-content">
+        <!-- GitHub repo widgets and links at the top -->
+        <div class="github-repo">
+            <iframe src="https://ghbtns.com/github-btn.html?user=elhuang04&repo=cs299-project4&type=star&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=elhuang04&repo=cs299-project4&type=fork&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>
+            <button onclick="window.open('https://github.com/elhuang04/cs299-project4', '_blank')">Visit the Repository</button>
+        </div>
+        <!-- Content will be inserted here -->
+        <div class="fade-out"></div>
+    </div>
+
+    <div class="expand-link" id="expand-link">Read More ▼</div>
+    <div class="minimize-link" id="minimize-link" style="display: none;">Read Less ▲</div>
+
+      <h3>3.3 Raw Data Profile</h3>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Before beginning data collection, our search term queries and relevant keywords were sourced from 19 sites: 11 for alt-right and 8 for gaming. This provided us with a list of 214 alt-right keywords, 486 gaming keywords, and 112 skip words (commonly used words within these articles that did not significantly contribute to the meaning of a sentence).<br>
+In our data collection, we were able to query a total of 5860 unique videos within the gaming category. The bulk of the alt-right content used came from the video transcriptions in the 93 queries of the top search result to the keywords in our alt-right keyword list.<br>
+The relevant data stored from these search results (in both categories of videos – political and gaming) included: 
+<span style="font-family: 'Roboto', sans-serif; background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px;">videoID</span>, 
+<span style="font-family: 'Roboto', sans-serif; background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px;">channelID</span>, 
+<span style="font-family: 'Roboto', sans-serif; background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px;">title</span>, 
+<span style="font-family: 'Roboto', sans-serif; background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px;">description</span>, 
+<span style="font-family: 'Roboto', sans-serif; background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px;">liveBroadcastContent</span>, 
+<span style="font-family: 'Roboto', sans-serif; background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px;">channelTitle</span>, 
+<span style="font-family: 'Roboto', sans-serif; background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px;">publishTime</span>, 
+<span style="font-family: 'Roboto', sans-serif; background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px;">alt_right_similarity_score</span>, and 
+<span style="font-family: 'Roboto', sans-serif; background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px;">predicted_category</span>.<br>
+</p>
+
+      <h3>3.4 Methodology</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;The method we chose to observe the presence of alt-right content in gaming communities on YouTube was primarily through <strong>search results</strong>. An alternative method we explored to investigate this relationship was probing YouTube’s recommendation system via “Up-Next” videos. A similar study on the observation of political bias on YouTube, for instance, uses the following strategy: using the top 3 search results of political queries to queue recommendations. They use this strategy as “a majority of YouTube users only click on the top 3 results” (Lutz, 2021). In these results and their recommended videos, the paper outlines using BERT to perform sentiment analysis on each video transcript and identify the political affiliation of a given video. With this in mind, we used a similar strategy to observe the gaming community and see how much overlap might exist between sub-categories in gaming videos to alt-right media (top search result of each query). As we know that the algorithm may recommend increasingly more extreme content with each video, our data collection first seeks to understand how much existing alt-right content is contained within videos in the gaming category. The idea is that the observation of a high overlap between the two spheres of media shows a strong correlation between the two types of videos, which in turn might lead to a more likely recommendation of an alt-right video, while very little overlap means that an alt-right video is less likely to lead directly to an alt-right video.<br></p>
+      <h3>3.5 Implementation Details</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Using the words sourced from various articles, we first queried 93 alt-right terms in YouTube’s search. We then took just the top search result of each query and stored these results in an alt-right video data frame. To ensure that our search queries yielded legitimate alt-right/ extreme content results, we manually checked the videos on YouTube (see Screenshots). Our initial idea for finding gaming videos was a similar method: retrieving the top search results for gaming-related queries. However, we received a more comprehensive list of relevant gaming videos through the gaming category as provided through the YouTube data API. Thus, our data collection mainly consisted of querying the YouTube data API for the top search results in the gaming category (without prompt/ query provided). Each search result request yielded roughly 300-700 videos of results, all of which were ultimately stored in a larger data frame (duplicates removed to only contain unique videos) of all gaming videos found.<br></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;The biggest limitation of our methodology was the quota limit for API requests, which reduced the size of our data collection pool. To work around this, the code ensures that all data is written to a <span style="background-color: #f0f0f0; font-weight: bold; padding: 2px 4px; border-radius: 4px;">.csv</span> file even when not all search results can be requested, providing a save point right before the quota limit is reached. Additionally, we switched our initial implementation of using the same API for retrieving video captions and used a Python package for transcriptions to reduce token usage.<br></p>
+
     </section>
     <section id="data-analysis">
       <div class="sticky-header">
-        <h2>Data Analysis</h2>
+        <h2>4 Data Analysis</h2>
       </div>
-      <h3>Summary of Findings (Qualitative & Quantitative Analysis)</h3>
-      <p>[Summary of Findings content here]</p>
-      <h3>Methodology</h3>
-      <p>[Methodology content here]</p>
-      <h3>Implementation</h3>
-      <p>[Implementation content here]</p>
+      <div class="data-analysis-container">
+    <!-- Left Column: Images and Figures -->
+    <div class="images-container">
+      <figure id="figure1" class="figure-container" onclick="togglePopup('popup1')">
+        <h4 class="figure-title">Figure 1: Distribution of Alt-Right Similarity Scores Across All Gaming Videos</h4>
+        <img src="images/graphics/Figure%201_%20Distribution%20of%20Alt-Right%20Similarity%20Scores%20Across%20All%20Gaming%20Videos.png" alt="Figure 1: Alt-Right Similarity Scores" class="figure-thumbnail">
+        <figcaption>Red line indicates the average similarity score across all gaming videos.</figcaption>
+      </figure>
+      <figure id="figure2" class="figure-container" onclick="togglePopup('popup2')">
+         <h4 class="figure-title">Figure 2: Gaming Video Sub-Categories vs Alt-Right Similarity Scores (Violin Plot)</h4>
+        <img src="images/graphics/Figure%202_%20Gaming%20Video%20Sub-Categories%20vs%20Alt-Right%20Similarity%20Scores%20(Violin%20Plot).png" alt="Figure 2: Gaming Video Sub-Categories" class="figure-thumbnail">
+        <figcaption>Highest average similarity score, 4.354%, associated with Strategy Game Tips, highlighted in yellow.</figcaption>
+      </figure>
+      <figure id="figure3" class="figure-container" onclick="togglePopup('popup3')">
+         <h4 class="figure-title">Figure 3: Top 10 Gaming Sub-Categories vs Alt-Right Similarity Scores (Boxplot)</h4>
+        <img src="images/graphics/Figure%203_%20Top%2010%20Gaming%20Sub-Categories%20vs%20Alt-Right%20Similarity%20Scores%20(Boxplot).png" alt="Figure 3:Figure 3: Top 10 Gaming Sub-Categories vs Alt-Right Similarity Scores (Boxplot)" class="figure-thumbnail">
+        <figcaption>Highest single video similarity score, 11.666%, associated with Mobile Game Updates outlined in red.</figcaption>
+      </figure>
+      <figure id="figure4" class="figure-container" onclick="togglePopup('popup4')">
+         <h4 class="figure-title">Figure 4: Gaming Video Sub-Categories vs Alt-Right Similarity Scores (Boxplot)</h4>
+        <img src="images/graphics/Figure%204_%20Gaming%20Video%20Sub-Categories%20vs%20Alt-Right%20Similarity%20Scores%20(Boxplot).png" alt="Figure 4: Gaming Video Sub-Categories vs Alt-Right Similarity Scores (Boxplot)" class="figure-thumbnail">
+        <figcaption>Highest single video similarity score, 11.666%, associated with Mobile Game Updates highlighted in yellow.</figcaption>
+      </figure>
+      <figure id="figure5" class="figure-container" onclick="togglePopup('popup5')">
+         <h4 class="figure-title">Figure 5: Distribution of Gaming Video Sub-Categories (Count of # Sub-Category Videos)</h4>
+        <img src="images/graphics/Figure%205_%20Distribution%20of%20Gaming%20Video%20Sub-Categories%20(Count%20of%20#%20Sub-Category%20Videos).png" alt="Figure 5: Distribution of Gaming Video Sub-Categories (Count of # Sub-Category Videos)" class="figure-thumbnail">
+        <figcaption>Top 5 sub-category video volume counts (highest to lowest): Other, Minecraft Hacks, Game Updates, League of Legends, Game Mechanics.</figcaption>
+      </figure>
+      <figure id="figure6" class="figure-container" onclick="togglePopup('popup6')">
+         <h4 class="figure-title">Figure 6: Overall Gaming Alt-Right Similarity Score From 2009 – 2024 (by Year)</h4>
+        <img src="images/graphics/Figure%206_%20Overall%20Gaming%20Alt-Right%20Similarity%20Score%20From%202009%20%E2%80%93%202024%20(by%20Year).png" alt="Figure 6: Overall Gaming Alt-Right Similarity Score From 2009 – 2024 (by Year)" class="figure-thumbnail">
+        <figcaption>Drop from over 4% alt-right similarity to under 2% similarity following 2019.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Right Column: Text Content -->
+    <div class="text-container">
+      <h3>4.1 Summary of Findings (Qualitative & Quantitative Analysis)</h3>
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp;Our analysis finds that gaming videos have an average similarity of 0.584% to alt-right media 
+            (<a href="#figure1" onclick="scrollToFigure('figure1')" style="color: blue; text-decoration: underline;">see Figure 1</a>). Unsurprisingly, the 5 videos that were scored with the highest alt-right similarity had the most mention of themes of gun violence, rage, and death (Table 1). The sub-category with the highest average similarity score is 
+            <span style="background-color: #f0f0f0; font-weight: bold; padding: 2px 4px; border-radius: 4px;">Strategy Game Tips</span>, which is 4.354% similar 
+            (<a href="#figure2" onclick="scrollToFigure('figure2')" style="color: blue; text-decoration: underline;">see Figure 2</a>). While the amount of overlap isn’t particularly high, the potential implications of propagating extreme content in the gaming sphere can be especially severe as the average audience members in the gaming community are teens.<br></p>
+
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;For instance, in the highest similarity category, 
+            <span style="background-color: #f0f0f0; font-weight: bold; padding: 2px 4px; border-radius: 4px;">Strategy Game Tips</span>, videos comment on games such as 
+            <span style="font-weight: bold; font-style: italic;">Teamfight Tactics</span> and 
+            <span style="font-weight: bold; font-style: italic;">Warhammer 3</span>, both of which are for youth ages 13 and up. Additionally, the single highest similarity score among all the videos was found in the 
+            <span style="background-color: #f0f0f0; font-weight: bold; padding: 2px 4px; border-radius: 4px;">Mobile Game Updates</span> sub-category, with one of its videos reaching 11.666% in similarity 
+            (<a href="#figure3" onclick="scrollToFigure('figure3')" style="color: blue; text-decoration: underline;">see Figure 3</a>, 
+            <a href="#figure4" onclick="scrollToFigure('figure4')" style="color: blue; text-decoration: underline;">4</a>). Beyond these high-similarity sub-categories, 
+            <span style="background-color: #f0f0f0; font-weight: bold; padding: 2px 4px; border-radius: 4px;">Minecraft Hacks</span> stands out as the category with the highest volume of videos in the gaming segment with more than 532 videos in its category, taking up 9.078% of the entire dataset 
+            (<a href="#figure5" onclick="scrollToFigure('figure5')" style="color: blue; text-decoration: underline;">see Figure 5</a>).<br></p>
+
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Between 2019 and 2020, we observed a significant decrease in alt-right similarity scores 
+            (<a href="#figure6" onclick="scrollToFigure('figure6')" style="color: blue; text-decoration: underline;">Figure 6</a>), which may be attributed to the changes in YouTube's search algorithms at roughly the same timeline. According to YouTube’s Official Blog team, “... in 2019 [YouTube] first began demoting borderline content in recommendations, resulting in a 70% drop in watchtime on non-subscribed, recommended borderline content in the U.S. Today, consumption of borderline content that comes from our recommendations is significantly below 1%” (Goodrow, 2021). These algorithm changes likely influenced gaming content, reducing incidental exposure to alt-right themes across the platform and potentially contributing to the overall drop in similarity scores.<br></p>
+<h3>4.2 Methodology</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; Our data analysis process involved several stages aimed at identifying the similarity between gaming videos and alt-right political media. Initially, we use a small number of purely political video transcripts preprocessed to remove any extraneous content (words like “and”, “or”, “the” which do not particularly reveal anything about the content of a text). The process for selecting these alt-right content videos is described above in our data collection methodology. To measure the similarity between alt-right content and the gaming video transcripts, we calculate a similarity score using word vectorization between each gaming video and the alt-right baseline. These scores provide a quantitative measure of the degree of alignment between gaming content and alt-right themes. Additionally, to understand how specific sub-categories within gaming may correlate with alt-right content, a classification approach is used to determine the categories of the gaming videos.<br></p>
+      <h3>4.3 Implementation</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; Using the <span class="highlight">videoID</span> information from the alt-right data frame, we retrieved video transcripts from all search results and combined them into a single document. We then used SpaCy, an NLP library, to extract all words and remove any irrelevant entities as specified in the <span class="highlight">skip_words.txt</span> file. The content of this was then combined with all the keywords we sourced from articles to form a master list of keywords used as a baseline for alt-right content. For each gaming video transcript, the similarity between the alt-right master list of keywords and the transcription of a given video was measured through cosine similarity. We implemented this through our <span class="highlight">compute_cosine_similarity</span> function, which calculates the similarity between the transcript of a YouTube video and a predefined list of keywords. Using the <span class="highlight">TfidfVectorizer</span> library, the function converts both the alt-right keywords and the gaming video transcript into vectors of term frequencies-inverse document frequencies (TF-IDF), which helps represent the importance of each word in the documents. The function then calculates the cosine similarity between the vectorized transcript and the combined keyword list, resulting in a similarity score. A similarity score of 0.0 means there is no similarity between a gaming video and alt-right media, whereas a maximum similarity score of 1.0 (100%) means that the content is entirely the same. To understand how sub-categories within gaming might be correlated with alt-right content, we used a keyword classification method to predict the categories of all retrieved gaming videos. The categorization keywords that helped make these predictions were generated by ChatGPT, which summarized patterns of video titles from the gaming video dataset we collected.<br></p>
+
+    </div>
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="togglePopup('popup1')">&times;</span>
+          <img src="images/graphics/Figure%201_%20Distribution%20of%20Alt-Right%20Similarity%20Scores%20Across%20All%20Gaming%20Videos.png" alt="Figure 1" class="figure-thumbnail">
+        </div>
+      </div>
+
+  <div id="popup2" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="togglePopup('popup2')">&times;</span>
+          <img src="images/graphics/Figure%202_%20Gaming%20Video%20Sub-Categories%20vs%20Alt-Right%20Similarity%20Scores%20(Violin%20Plot).png" alt="Figure 2: Gaming Video Sub-Categories" class="figure-thumbnail">
+      </div>
+  </div>
+    <div id="popup3" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="togglePopup('popup3')">&times;</span>
+          <img src="images/graphics/Figure%203_%20Top%2010%20Gaming%20Sub-Categories%20vs%20Alt-Right%20Similarity%20Scores%20(Boxplot).png" alt="Figure 3: Top 10 Gaming Sub-Categories vs Alt-Right Similarity Scores (Boxplot)" class="figure-thumbnail">
+      </div>
+  </div>
+    <div id="popup4" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="togglePopup('popup4')">&times;</span>
+          <img src="images/graphics/Figure%204_%20Gaming%20Video%20Sub-Categories%20vs%20Alt-Right%20Similarity%20Scores%20(Boxplot).png" alt="Figure 4: Gaming Video Sub-Categories vs Alt-Right Similarity Scores (Boxplot)" class="figure-thumbnail">
+      </div>
+  </div>
+    <div id="popup5" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="togglePopup('popup5')">&times;</span>
+          <img src="images/graphics/Figure%205_%20Distribution%20of%20Gaming%20Video%20Sub-Categories%20(Count%20of%20#%20Sub-Category%20Videos).png" alt="Figure 5: Distribution of Gaming Video Sub-Categories (Count of # Sub-Category Videos)" class="figure-thumbnail">
+      </div>
+  </div>
+    <div id="popup6" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="togglePopup('popup6')">&times;</span>
+          <img src="images/graphics/Figure%206_%20Overall%20Gaming%20Alt-Right%20Similarity%20Score%20From%202009%20%E2%80%93%202024%20(by%20Year).png" alt="Figure 6: Overall Gaming Alt-Right Similarity Score From 2009 – 2024 (by Year)" class="figure-thumbnail">
+      </div>
+  </div>
+  </div>
+      
     </section>
     <section id="discussion">
       <div class="sticky-header">
-        <h2>Discussion</h2>
+        <h2>5 Discussion</h2>
       </div>
-      <h3>Reflection of Results</h3>
-      <p>[Reflection of Results content here]</p>
-      <h3>Implications Discovered</h3>
-      <p>[Implications Discovered content here]</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Our observation of the content overlap between gaming videos and alt-right media on YouTube calls attention to the intersection of algorithmic biases and social influence, themes central to both <a href="https://data-feminism.mitpress.mit.edu/" style="font-weight: bold; font-style: italic; color: blue; text-decoration: underline;">Data Feminism</a> by Catherine D’Ignazio and Lauren F. Klein and <a href="https://nyupress.org/9781479837243/algorithms-of-oppression/" style="font-weight: bold; font-style: italic; color: blue; text-decoration: underline;">Algorithms of Oppression</a> by Safiya Noble. More specifically, our analysis examines the power held by the algorithms designed by YouTube, which influences the content watched by users.<br></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;In <strong><em>Data Feminism</em></strong>, D’Ignazio and Klein, one principle that strongly relates to our research topic is the idea of examining power. D’Ignazio and Klein argue for a critical examination of how data systems reflect and reinforce existing power dynamics (Chapter 1), which is reflected in our observation of YouTube’s recommendation system, which urges users to make uninformed decisions on the platform. A secondary principle observed in our project is plurality (Chapter 5); as our objective was to thoroughly probe the platform for content that may exclude more neutral perspectives.<br></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Similarly, Noble highlights how search engines and recommendation systems can amplify harmful stereotypes and contribute to the marginalization of certain groups by promoting biased content via “neutral” or “objective” recommendation systems as the ultimate decisions algorithms make are solely based on their designs, which translate human biases into automated/ digital processes (Noble, pp. 59-60). Applying these perspectives in our methodology helped to uncover that YouTube’s algorithm may inadvertently favor or demote certain types of content based on the extremity of its video content (language included in each video transcript).<br></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;When the content was observed more closely, we were able to find instances of aggressive behavior or wording within these video transcripts, proving the validity of our algorithms. The findings of decreased similarity scores support the idea of favoring alt-right content as we observed the impact of deliberate intervention in post-2019 results, demonstrating the mitigation of extreme content/ biases with intentional algorithmic adjustments.<br></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Ultimately, both <strong><em>Data Feminism</em></strong> and <strong><em>Algorithms of Oppression</em></strong> underscore the importance of designing algorithms with an awareness of social impact, particularly for communities vulnerable to bias. This study’s findings reinforce that unchecked algorithmic processes can inadvertently lead to the propagation of harmful content. Therefore, a feminist and justice-oriented approach to data analysis and recommendation algorithms is essential for fostering inclusivity and equity within digital spaces.<br></p>
+
     </section>
     <section id="conclusion">
       <div class="sticky-header">
-        <h2>Conclusion & Recommendations</h2>
+        <h2>6 Conclusion & Recommendations</h2>
       </div>
-      <p>[Conclusion & Recommendations content here]</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; To address the overlap between alt-right content and other ideologically driven spaces on platforms like YouTube, a focused reevaluation of both the platform's recommendation algorithms and its monetization policies is essential. Our research (<strong>literature review</strong>) and data observations suggest that videos with alt-right or alt-lite language are often promoted by YouTube’s algorithm because they drive high engagement, especially among niche, ideologically aligned audiences. One specific recommendation to reduce the prominence of such content is to adjust the monetization model. Videos featuring harmful rhetoric should be penalized or demonetized to limit the financial rewards associated with spreading extremist ideologies. If creators are unable to profit from videos that exploit or promote harmful content, the incentive to produce and recommend this material is narrowed.<br></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; This change would also help shift the algorithm’s focus toward content that fosters more constructive, ethical discussions, rather than engagement metrics, which escalate divisive controversy. While this adjustment may face resistance from creators and stakeholders who prioritize profit, it aligns the platform's incentive structure with societal responsibility. By no longer rewarding extremist content financially, YouTube could encourage creators to produce more inclusive, informative, and responsible videos, which would ultimately benefit the platform's long-term credibility by improving the safety and satisfaction of users in the online community.<br></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Additionally, actions to drive greater platform accountability are critical in addressing this issue. Independent, data-driven audits of YouTube’s recommendation algorithms could provide transparency in how content is promoted (both in recommendations and in the visibility of top search results) and help identify areas where harmful ideologies are unintentionally amplified. By conducting regular external audits, YouTube would ensure its content recommendation system adheres to responsible standards, promoting positive content while minimizing the influence of divisive or extremist material. These audits would also offer actionable insights, allowing the platform to make necessary adjustments to its algorithms and content moderation practices.<br></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Ultimately, the goal is to strengthen the autonomy and knowledge of users, empowering them to make informed decisions without the invisible influence of algorithms pushed onto their community spaces. Platforms like YouTube must prioritize user safety and autonomy, fostering environments where users are aware of their digital decisions and encouraged to engage with content that aligns with collective ethical standards. Through the combination of adjusting monetization policies and ensuring stronger platform accountability, YouTube and other platforms can take meaningful steps to improve the moral soundness of popular digital media and promote healthier, more constructive dialogue across diverse categories of content.<br></p>
+
     </section>
     <section id="references">
       <div class="sticky-header">

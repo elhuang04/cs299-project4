@@ -16,22 +16,13 @@ function toggleSection(headerElement) {
   }
 }
 
-function togglePopup() {
-    const popup = document.getElementById("popup");
-    popup.style.display = popup.style.display === "flex" ? "none" : "flex";
-}
-
-function togglePopup1() {
-    const popup = document.getElementById("popup");
-    popup.style.display = popup.style.display === "none" || popup.style.display === "" ? "block" : "none";
-}
-
 function togglePopup(popupId) {
     const popup = document.getElementById(popupId);
     if (popup) {
         popup.style.display = popup.style.display === "none" || popup.style.display === "" ? "block" : "none";
     }
 }
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -106,3 +97,49 @@ document.addEventListener("DOMContentLoaded", function() {
       observer.observe(section);
   });
 });
+
+function scrollToFigureInColumn(figureId) {
+  const figure = document.getElementById(figureId);
+  const figuresColumn = document.getElementById("figuresColumn");
+
+  if (figure && figuresColumn) {
+    // Calculate the offset of the figure within figuresColumn
+    const offsetTop = figure.offsetTop - figuresColumn.scrollTop;
+    
+    // Smoothly scroll figuresColumn to the figure's position
+    figuresColumn.scrollTo({
+      top: offsetTop,
+      behavior: "smooth"
+    });
+  }
+}
+ document.addEventListener('DOMContentLoaded', () => {
+            fetch('https://raw.githubusercontent.com/elhuang04/cs299-project4/main/README.md')
+                .then(response => response.text())
+                .then(markdown => {
+                    const converter = new showdown.Converter();
+                    const html = converter.makeHtml(markdown);
+                    document.getElementById('markdown-content').innerHTML += html;
+                })
+                .catch(error => console.error('Error fetching markdown:', error));
+
+            document.getElementById('expand-link').addEventListener('click', function () {
+                const card = document.getElementById('markdown-content');
+                card.classList.add('expanded');
+                document.getElementById('expand-link').style.display = 'none';
+                document.getElementById('minimize-link').style.display = 'block';
+            });
+
+            document.getElementById('minimize-link').addEventListener('click', function () {
+                const card = document.getElementById('markdown-content');
+                card.classList.remove('expanded');
+                document.getElementById('expand-link').style.display = 'block';
+                document.getElementById('minimize-link').style.display = 'none';
+            });
+        });
+
+
+
+
+
+
