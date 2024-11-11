@@ -65,7 +65,7 @@ header .group-members {
 
 a {
   font-weight: bold; 
-  font-style: italic; 
+  font-style: normal; 
   color: blue; 
   text-decoration: underline;
 }
@@ -471,5 +471,22 @@ iframe {
 }
 
 .panel-links a:hover {
+  color: #ffcccc;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: underline;
+}
+
+footer a:hover {
   color: #ffcccc;
 }
