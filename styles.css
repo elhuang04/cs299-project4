@@ -70,7 +70,9 @@ a {
   text-decoration: underline;
 }
 
-a .special {
+.special {
+  font-weight:normal;
+  font-style: normal;
   text-decoration: none;
   border-bottom: 1px dotted rgba(255, 255, 255, 0.75) !important; /* Thicker dotted underline with 75% opacity */
   color: inherit;
