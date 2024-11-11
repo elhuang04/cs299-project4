@@ -19,9 +19,13 @@ function toggleSection(headerElement) {
 function togglePopup(popupId) {
     const popup = document.getElementById(popupId);
     if (popup) {
-        popup.style.display = popup.style.display === "none" || popup.style.display === "" ? "block" : "none";
+        console.log(`Toggling popup with ID: ${popupId}`); // Debugging statement
+        popup.style.display = popup.style.display === "none" || popup.style.display === "" ? "flex" : "none";
+    } else {
+        console.error(`No element found with ID: ${popupId}`); // Error handling
     }
 }
+
 
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
